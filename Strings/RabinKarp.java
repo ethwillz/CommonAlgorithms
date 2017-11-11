@@ -1,9 +1,3 @@
-public static void main(String[] args){
-    String s = "abcdefghijk";
-    String toMatch = "dff";
-    System.out.println(patternExists(s, toMatch));
-}
-
 /*
   Basic idea of this algorithm is that each substring hash will be unique
   For a given frame of size k
@@ -11,6 +5,7 @@ public static void main(String[] args){
   Next hash (starting at index 1) = ()(hash - s[0]) / prime) + s[k+1] * s^k
   Check each frame's hash until a match is found
 */
+
 static boolean patternExists(String s, String toMatch){
     int prime = 31, patternHash = 0, hash = 0;
 

@@ -19,7 +19,7 @@ public DFSUtil(Graph g, int u, boolean[] visited){
 }
 
 public void IterativeDFS(int v){
-  Stack<Integer> s = new Stack<>();
+  Deque<Integer> s = new Deque<>();
   s.push(v);
 
   while(!s.isEmpty()){
